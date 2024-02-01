@@ -1,12 +1,12 @@
 pipeline {
     agent any
     tools {
-        nodejs 'nodejs'
+        nodejs 'Node21.6.1'
     }
     stages {
         stage('Build') {
             steps {
-                checkout scmGit(branches: [[name: 'main']], extensions: [], userRemoteConfigs: [[credentialsId: 'Github', url: 'https://github.com/nostress004/jenkins-test.git']])
+                // checkout scmGit(branches: [[name: 'main']], extensions: [], userRemoteConfigs: [[credentialsId: 'Github', url: 'https://github.com/nostress004/jenkins-test.git']])
                 sh 'npm install'
             }
         }
