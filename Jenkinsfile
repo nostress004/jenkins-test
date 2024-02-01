@@ -13,7 +13,9 @@ pipeline {
         stage('Test') {
             steps {
                 // sh 'npm run test'
-                echo "npm run cypress:test"
+                script(
+                    sh('npm run cypress:test')
+                )
             }
         }
     }
