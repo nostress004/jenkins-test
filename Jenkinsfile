@@ -17,7 +17,7 @@ pipeline {
                      // Lekérdezzük a Docker host URL-jét
                     def dockerHost = sh(script: 'echo $DOCKER_HOST', returnStdout: true).trim()
 
-                    // Kiírjuk a konzolra
+                    // Kiírjuk a konzolraaaa 
                     echo "Docker Host URL: ${dockerHost}"
                     //docker.image('cypress/base').inside{
                     //    sh 'ls'
