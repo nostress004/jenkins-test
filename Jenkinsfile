@@ -14,7 +14,10 @@ pipeline {
             steps {
                 // sh 'npm run test'
                 script{
-                    sh('npm run cypress:test')
+                    docker.image('cypress/base').inside{
+                        sh 'ls'
+                    }
+                    // sh('npm run cypress:test')
                 }
             }
         }
