@@ -14,9 +14,14 @@ pipeline {
             steps {
                 // sh 'npm run test'
                 script{
-                    docker.image('cypress/base').inside{
-                        sh 'ls'
-                    }
+                     // Lekérdezzük a Docker host URL-jét
+                    def dockerHost = sh(script: 'echo $DOCKER_HOST', returnStdout: true).trim()
+
+                    // Kiírjuk a konzolra
+                    echo "Docker Host URL: ${dockerHost}"
+                    //docker.image('cypress/base').inside{
+                    //    sh 'ls'
+                    //}
                     // sh('npm run cypress:test')
                 }
             }
