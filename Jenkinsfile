@@ -18,10 +18,10 @@ pipeline {
                     def dockerHost = sh(script: 'echo $DOCKER_HOST', returnStdout: true).trim()
 
                     echo "Docker Host URL: ${dockerHost}"
-                    //docker.image('cypress/base').inside{
-                    //    sh 'ls'
-                    //}
-                    // sh('npm run cypress:test')
+                    docker.image('cypress/base').inside{
+                        sh 'ls'
+                    }
+                    sh('npm run cypress:test')
                 }
             }
         }
