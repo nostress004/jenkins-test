@@ -14,7 +14,10 @@ pipeline {
             steps {
                 // sh 'npm run test'
                 //sh './ci/run-cypress.sh'
-                echo 'ls'
+                script{
+                    echo "ls"
+                }
+
                 /*script{
                       // Lekérdezzük a Docker host URL-jét
                     def dockerHost = sh(script: 'echo $DOCKER_HOST', returnStdout: true).trim()
