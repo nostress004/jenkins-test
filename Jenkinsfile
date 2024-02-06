@@ -8,6 +8,7 @@ pipeline {
             steps {
                 // checkout scmGit(branches: [[name: 'main']], extensions: [], userRemoteConfigs: [[credentialsId: 'Github', url: 'https://github.com/nostress004/jenkins-test.git']])
                 sh 'npm install'
+                sh 'npm install'
             }
         }
         stage('Start cypress container') {
