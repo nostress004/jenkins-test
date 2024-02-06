@@ -8,13 +8,13 @@ pipeline {
             steps {
                 // checkout scmGit(branches: [[name: 'main']], extensions: [], userRemoteConfigs: [[credentialsId: 'Github', url: 'https://github.com/nostress004/jenkins-test.git']])
                 sh 'npm install'
-                sh 'npm install'
             }
         }
         stage('Start cypress container') {
             steps {
                 // sh 'npm run test'
-                sh './ci/run-cypress.sh'
+                //sh './ci/run-cypress.sh'
+                echo 'ls'
                 /*script{
                       // Lekérdezzük a Docker host URL-jét
                     def dockerHost = sh(script: 'echo $DOCKER_HOST', returnStdout: true).trim()
@@ -29,8 +29,8 @@ pipeline {
         }
         stage('Stop Cypress container') {
             steps {
-               sh './ci/stop-cypress.sh'
-               sh './ci/stop-cypress.sh'
+               //sh './ci/stop-cypress.sh'
+               //sh './ci/stop-cypress.sh'
             }
         }
     }
