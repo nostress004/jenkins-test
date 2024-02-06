@@ -12,13 +12,12 @@ pipeline {
         }
         stage('Start cypress container') {
             steps {
-                // sh 'npm run test'
-                //sh './ci/run-cypress.sh'
-                script{
+                sh './ci/run-cypress.sh'
+                /*script{
                     def asd = sh(script: 'ls', returnStdout: true).trim()
 
                     echo "Docker Host URL: ${asd}"
-                }
+                }*/
 
                 /*script{
                       // Lekérdezzük a Docker host URL-jét
