@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        docker
+    }
     tools {
         nodejs 'Node21.6.1'
     }
