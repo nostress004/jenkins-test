@@ -15,7 +15,9 @@ pipeline {
                 // sh 'npm run test'
                 //sh './ci/run-cypress.sh'
                 script{
-                    echo "ls"
+                    def asd = sh(script: 'echo ls', returnStdout: true).trim()
+
+                    echo "Docker Host URL: ${asd}"
                 }
 
                 /*script{
