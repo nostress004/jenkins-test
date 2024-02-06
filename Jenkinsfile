@@ -34,6 +34,9 @@ pipeline {
             steps {
                //sh './ci/stop-cypress.sh'
                //sh './ci/stop-cypress.sh'
+               script{
+                echo 'ls'
+               }
             }
         }
     }
