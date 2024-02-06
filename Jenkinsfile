@@ -29,6 +29,7 @@ pipeline {
         stage('Stop Cypress container') {
             steps {
                sh './ci/stop-cypress.sh'
+               sh './ci/stop-cypress.sh'
             }
         }
     }
